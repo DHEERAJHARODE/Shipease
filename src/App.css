@@ -1,5 +1,119 @@
 /* src/App.css */
 
+/* App.css Additions */
+
+:root {
+  --primary: #2563eb;
+  --secondary: #64748b;
+  --bg-color: #ffffff;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Button Styles */
+.primary-btn {
+  padding: 14px 32px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.5);
+  background: #1d4ed8;
+}
+
+.secondary-btn {
+  padding: 14px 32px;
+  background: white;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0; /* Starts invisible */
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.bounce-card {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Feature Card Hover Effect (Specific override) */
+div[style*="featureCard"]:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+  border-color: #bfdbfe !important;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  div[style*="heroSection"] {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 60px !important;
+  }
+  div[style*="heroContainer"] {
+    justify-content: center;
+  }
+  div[style*="buttonGroup"] {
+    justify-content: center;
+  }
+  div[style*="statsRow"] {
+    justify-content: center;
+  }
+  div[style*="heroVisual"] {
+    margin-top: 50px;
+    transform: scale(0.9);
+  }
+}
+
 /* --- LAYOUTS --- */
 .page-container {
   width: 100%;
