@@ -49,17 +49,20 @@ const LandingPage = () => {
               <span style={styles.pillBadge}>✨ #1 Logistics App in India</span>
             </div>
             
-            <h1 style={styles.heroTitle} className="fade-in-up" style={{animationDelay: '0.2s', ...styles.heroTitle}}>
+            {/* FIXED: Merged duplicate style props */}
+            <h1 className="fade-in-up" style={{...styles.heroTitle, animationDelay: '0.2s'}}>
               Move Anything, <br />
               <span style={styles.gradientText}>Anywhere, Instantly.</span>
             </h1>
             
-            <p style={styles.heroSubtitle} className="fade-in-up" style={{animationDelay: '0.3s', ...styles.heroSubtitle}}>
+            {/* FIXED: Merged duplicate style props */}
+            <p className="fade-in-up" style={{...styles.heroSubtitle, animationDelay: '0.3s'}}>
               Experience the future of logistics with ShipEase. Connect with verified drivers, 
               track goods in real-time, and save up to 30% on every shipment.
             </p>
 
-            <div style={styles.buttonGroup} className="fade-in-up" style={{animationDelay: '0.4s', ...styles.buttonGroup}}>
+            {/* FIXED: Merged duplicate style props */}
+            <div className="fade-in-up" style={{...styles.buttonGroup, animationDelay: '0.4s'}}>
               <button className="primary-btn" onClick={() => handleNav("/booking/create")}>
                 Book Now &rarr;
               </button>
@@ -68,7 +71,8 @@ const LandingPage = () => {
               </button>
             </div>
 
-            <div style={styles.statsRow} className="fade-in-up" style={{animationDelay: '0.5s', ...styles.statsRow}}>
+            {/* FIXED: Merged duplicate style props */}
+            <div className="fade-in-up" style={{...styles.statsRow, animationDelay: '0.5s'}}>
               <div style={styles.statItem}>
                 <h4 style={styles.statNum}>50k+</h4>
                 <span style={styles.statLabel}>Deliveries</span>
